@@ -1,0 +1,1474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mihaan | Professional Child Model Portfolio</title>
+  <meta name="description" content="Explore the official editorial portfolio of Mihaan, a 4-year-old child model based in Hyderabad, India. Featuring campaign headshots, runways, and contact info.">
+  
+  <!-- Typography (Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400;1,600&family=Montserrat:wght@300;400;500&family=Lato:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+
+  <style>
+    /* DESIGN SYSTEM & CUSTOM VARIABLES */
+    :root {
+      --bg-color: #FDFAF6;       /* warm cream */
+      --surface-color: #F5EFE6;  /* soft sand */
+      --accent-color: #C8A98A;   /* warm camel */
+      --text-primary: #1C1C1C;
+      --text-secondary: #7A6F66;
+      --highlight-color: #E8D5C4; /* blush */
+      
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans-alt: 'Montserrat', sans-serif;
+      --font-sans: 'Lato', sans-serif;
+      
+      --transition-ease: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* GLOBAL RESET & BASE */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* TYPOGRAPHY */
+    h1, h2, h3, h4, .serif-text {
+      font-family: var(--font-serif);
+      font-weight: 400;
+    }
+
+    p {
+      font-weight: 300;
+      color: var(--text-secondary);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* LAYOUT UTILITIES */
+    .section-label {
+      font-family: var(--font-sans-alt);
+      font-size: 0.7rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: 3.5rem;
+      font-style: italic;
+      color: var(--text-primary);
+      margin-bottom: 3.5rem;
+      line-height: 1.1;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .editorial-divider {
+      width: 40px;
+      height: 1px;
+      background-color: var(--accent-color);
+      margin-bottom: 2rem;
+    }
+
+    /* SCROLL REVEAL (FADE UP) */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 1.2s var(--transition-ease), transform 1.2s var(--transition-ease);
+    }
+
+    .about-info.fade-up {
+      transition-delay: 0.15s;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* STARTUP ANIMATION (INTRO SCREEN) */
+    #intro-screen {
+      position: fixed;
+      inset: 0;
+      background-color: var(--bg-color);
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      animation: fade-screen 3.1s forwards ease-in-out;
+    }
+
+    .intro-name {
+      font-family: var(--font-serif);
+      font-size: 6rem;
+      font-style: italic;
+      color: var(--text-primary);
+      text-transform: uppercase;
+      opacity: 0;
+      letter-spacing: 0.6em;
+      transform: scale(0.96);
+      animation: name-fade 2.6s forwards cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .intro-line {
+      width: 60px;
+      height: 1px;
+      background-color: var(--accent-color);
+      margin: 1.5rem 0;
+      transform: scaleX(0);
+      transform-origin: left;
+      animation: line-draw 2.6s forwards cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .intro-sub {
+      font-family: var(--font-sans-alt);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: var(--text-secondary);
+      opacity: 0;
+      transform: translateY(5px);
+      animation: sub-fade 2.6s forwards ease-out;
+    }
+
+    @keyframes fade-screen {
+      0%, 83.8% { opacity: 1; visibility: visible; }
+      100% { opacity: 0; visibility: hidden; }
+    }
+
+    @keyframes name-fade {
+      0% { opacity: 0; letter-spacing: 0.6em; transform: translateY(10px) scale(0.96); }
+      11.5% { opacity: 0; letter-spacing: 0.6em; transform: translateY(10px) scale(0.96); }
+      42.3% { opacity: 1; letter-spacing: 0.25em; transform: translateY(0) scale(1); }
+      100% { opacity: 1; letter-spacing: 0.25em; transform: translateY(0) scale(1); }
+    }
+
+    @keyframes line-draw {
+      0%, 73% { transform: scaleX(0); }
+      88.4% { transform: scaleX(1); }
+      100% { transform: scaleX(1); }
+    }
+
+    @keyframes sub-fade {
+      0%, 88.4% { opacity: 0; transform: translateY(5px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* NAVIGATION */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      transition: background-color 0.4s ease, border-bottom 0.4s ease;
+      background-color: transparent;
+      border-bottom: 1px solid transparent;
+    }
+
+    header.scrolled {
+      background-color: rgba(253, 250, 246, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(200, 169, 138, 0.15);
+    }
+
+    .nav-container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      font-style: italic;
+      color: var(--text-primary);
+      letter-spacing: 0.05em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-family: var(--font-sans-alt);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--text-secondary);
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background-color: var(--accent-color);
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text-primary);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    /* MOBILE NAV BUTTON */
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      flex-direction: column;
+      gap: 5px;
+      z-index: 102;
+      padding: 4px 0;
+    }
+
+    .mobile-menu-btn span {
+      display: block;
+      width: 22px;
+      height: 1px;
+      background-color: var(--text-primary);
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    /* MOBILE NAV OVERLAY */
+    .mobile-overlay {
+      position: fixed;
+      inset: 0;
+      background-color: var(--bg-color);
+      z-index: 101;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transform: translateY(-100%);
+      transition: transform 0.5s var(--transition-ease);
+    }
+
+    .mobile-overlay.active {
+      transform: translateY(0);
+    }
+
+    .mobile-nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .mobile-nav-links a {
+      font-family: var(--font-serif);
+      font-size: 2.5rem;
+      font-style: italic;
+      color: var(--text-primary);
+    }
+
+    /* HERO SECTION */
+    #hero {
+      height: 100vh;
+      width: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background-color: var(--bg-color);
+    }
+
+    .hero-img-wrapper {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 58%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .hero-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      max-width: 600px;
+      padding-left: 8%;
+    }
+
+    .hero-title {
+      font-size: 8rem;
+      font-style: italic;
+      line-height: 0.85;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-subtitle {
+      font-family: var(--font-sans-alt);
+      font-size: 0.75rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      font-weight: 400;
+    }
+
+    .hero-location {
+      position: absolute;
+      bottom: 2.5rem;
+      right: 4%;
+      z-index: 10;
+      font-family: var(--font-sans-alt);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    /* ABOUT SECTION */
+    #about {
+      padding: 10rem 0;
+      background-color: var(--bg-color);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 5fr 7fr;
+      gap: 6rem;
+      align-items: center;
+    }
+
+    .about-img-frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 3/4;
+      overflow: hidden;
+      background-color: var(--surface-color);
+    }
+
+    .about-img-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      transition: transform 0.8s var(--transition-ease);
+    }
+
+    .about-img-frame:hover img {
+      transform: scale(1.03);
+    }
+
+    .about-pullquote {
+      font-family: var(--font-serif);
+      font-size: 2.5rem;
+      font-style: italic;
+      color: var(--text-primary);
+      line-height: 1.25;
+      margin-bottom: 2rem;
+    }
+
+    .about-stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem 3rem;
+      border-top: 1px solid rgba(200, 169, 138, 0.3);
+      border-bottom: 1px solid rgba(200, 169, 138, 0.3);
+      padding: 2.5rem 0;
+      margin-bottom: 2.5rem;
+    }
+
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
+    .stat-label {
+      font-family: var(--font-sans-alt);
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    .stat-value {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      color: var(--text-primary);
+    }
+
+    .about-desc {
+      font-size: 1.05rem;
+      font-weight: 300;
+      line-height: 1.85;
+      color: var(--text-secondary);
+    }
+
+    /* FEATURED FACES */
+    #featured-faces {
+      padding: 8rem 0;
+      background-color: var(--bg-color);
+    }
+
+    .featured-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, minmax(320px, auto));
+      gap: 3rem;
+    }
+
+    .featured-item {
+      overflow: hidden;
+      background-color: var(--surface-color);
+      position: relative;
+    }
+
+    .featured-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      transition: transform 0.8s var(--transition-ease);
+      display: block;
+    }
+
+    .featured-item:hover img {
+      transform: scale(1.03);
+    }
+
+    .featured-item-1 {
+      grid-column: 1;
+      grid-row: 1 / span 2;
+      min-height: 660px;
+    }
+
+    .featured-item-2 {
+      grid-column: 2;
+      grid-row: 1;
+      aspect-ratio: 3/4;
+    }
+
+    .featured-item-3 {
+      grid-column: 2;
+      grid-row: 2;
+      aspect-ratio: 3/4;
+    }
+
+    .featured-item-4 {
+      grid-column: 3;
+      grid-row: 1;
+      aspect-ratio: 3/4;
+    }
+
+    .featured-item-5 {
+      grid-column: 3;
+      grid-row: 2;
+      aspect-ratio: 3/4;
+    }
+
+    /* EDITORIAL HIGHLIGHTS */
+    #editorial-highlights {
+      padding: 10rem 0;
+      background-color: var(--bg-color);
+      overflow-x: hidden;
+    }
+
+    .editorial-row {
+      display: flex;
+      align-items: center;
+      gap: 6rem;
+      margin-bottom: 10rem;
+    }
+
+    .editorial-row.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .editorial-img-col {
+      width: 58%;
+      aspect-ratio: 16/10;
+      overflow: hidden;
+      background-color: var(--surface-color);
+    }
+
+    .editorial-img-col img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      transition: transform 0.8s var(--transition-ease);
+    }
+
+    .editorial-img-col:hover img {
+      transform: scale(1.03);
+    }
+
+    .editorial-text-col {
+      width: 42%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .editorial-num {
+      font-family: var(--font-sans-alt);
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      color: var(--accent-color);
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+    }
+
+    .editorial-title {
+      font-family: var(--font-serif);
+      font-size: 2.8rem;
+      color: var(--text-primary);
+      margin-bottom: 1.5rem;
+      line-height: 1.15;
+    }
+
+    .editorial-desc {
+      font-size: 1rem;
+      line-height: 1.8;
+      font-weight: 300;
+      color: var(--text-secondary);
+    }
+
+    /* Full Bleed row inside Highlights */
+    .editorial-fullbleed {
+      position: relative;
+      width: 100vw;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      height: 70vh;
+      min-height: 500px;
+      overflow: hidden;
+      background-color: var(--surface-color);
+    }
+
+    .editorial-fullbleed img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 5%;
+      transition: transform 0.8s var(--transition-ease);
+    }
+
+    .editorial-fullbleed:hover img {
+      transform: scale(1.03);
+    }
+
+    .editorial-fullbleed::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(28, 28, 28, 0.55) 0%,
+        rgba(28, 28, 28, 0.15) 50%,
+        transparent 100%
+      );
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .fullbleed-text-box {
+      z-index: 2;
+    }
+
+    .fullbleed-text-box {
+      position: absolute;
+      bottom: 4rem;
+      left: 8%;
+      color: #FDFAF6;
+      max-width: 450px;
+      z-index: 10;
+    }
+
+    .fullbleed-title {
+      font-family: var(--font-serif);
+      font-size: 3rem;
+      color: #FDFAF6;
+      margin-bottom: 1rem;
+      line-height: 1.1;
+    }
+
+    .fullbleed-desc {
+      font-size: 0.95rem;
+      color: rgba(253, 250, 246, 0.85);
+      font-weight: 300;
+      line-height: 1.7;
+    }
+
+    /* PERSONALITY FRAMES */
+    #personality-frames {
+      padding: 8rem 0;
+      background-color: var(--bg-color);
+    }
+
+    .personality-grid {
+      column-count: 3;
+      column-gap: 2.5rem;
+      width: 100%;
+    }
+
+    .personality-item {
+      break-inside: avoid;
+      margin-bottom: 2.5rem;
+      overflow: hidden;
+      background-color: var(--surface-color);
+    }
+
+    .personality-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.8s var(--transition-ease);
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .personality-item:hover img {
+      transform: scale(1.03);
+    }
+
+    .personality-graphic-card {
+      break-inside: avoid;
+      margin-bottom: 2.5rem;
+      aspect-ratio: 3/4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 2.5rem;
+      background-color: var(--surface-color);
+      text-align: center;
+      box-sizing: border-box;
+      border: 1px solid rgba(200, 169, 138, 0.18);
+    }
+
+    .card-tag {
+      font-family: var(--font-sans-alt);
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      color: var(--accent-color);
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      font-weight: 500;
+    }
+
+    .card-rule {
+      width: 32px;
+      height: 1px;
+      background-color: var(--accent-color);
+      margin: 0 auto 2rem auto;
+    }
+
+    .card-quote {
+      font-family: var(--font-serif);
+      font-size: 1.9rem;
+      font-style: italic;
+      color: var(--text-primary);
+      line-height: 1.45;
+      margin-bottom: 2rem;
+      font-weight: 400;
+    }
+
+    .card-name-large {
+      font-family: var(--font-serif);
+      font-size: 4.5rem;
+      font-style: italic;
+      color: var(--text-primary);
+      letter-spacing: 0.08em;
+      line-height: 1;
+      margin-bottom: 1.5rem;
+    }
+
+    .card-signature {
+      font-family: var(--font-sans-alt);
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+
+    /* PORTFOLIO GRID */
+    #portfolio {
+      padding: 8rem 0;
+      background-color: var(--bg-color);
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+    }
+
+    .portfolio-item {
+      aspect-ratio: 3/4;
+      overflow: hidden;
+      position: relative;
+      background-color: var(--surface-color);
+      border: 1px solid transparent;
+      transition: border-color 0.4s ease;
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      transition: transform 0.8s var(--transition-ease);
+      display: block;
+    }
+
+    .portfolio-item:hover img {
+      transform: scale(1.03);
+    }
+
+    .portfolio-item:hover {
+      border-color: var(--accent-color);
+    }
+
+    /* CONTACT SECTION */
+    #contact {
+      background-color: var(--surface-color);
+      padding: 10rem 0;
+      text-align: center;
+    }
+
+    .contact-title {
+      font-family: var(--font-serif);
+      font-size: 4rem;
+      font-style: italic;
+      color: var(--text-primary);
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-subtext {
+      font-family: var(--font-sans-alt);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: var(--text-secondary);
+      margin-bottom: 4.5rem;
+      font-weight: 400;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2.5rem;
+    }
+
+    .contact-link {
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      color: var(--text-primary);
+      position: relative;
+      padding-bottom: 0.6rem;
+      transition: opacity 0.3s ease;
+    }
+
+    .contact-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: var(--accent-color);
+      transform: scaleX(0.7);
+      transform-origin: center;
+      transition: transform 0.4s var(--transition-ease);
+    }
+
+    .contact-link:hover::after {
+      transform: scaleX(1);
+    }
+
+    .contact-link:hover {
+      opacity: 0.85;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: var(--surface-color);
+      padding: 4rem 0;
+      border-top: 1px solid rgba(200, 169, 138, 0.2);
+      text-align: center;
+    }
+
+    .footer-text {
+      font-family: var(--font-sans-alt);
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    /* RESPONSIVE DESIGN - BREAKPOINTS */
+
+    /* TABLET & SMALL DESKTOP (768px - 1279px) */
+    @media (max-width: 1279px) {
+      .hero-title {
+        font-size: 6.5rem;
+      }
+      .about-grid {
+        gap: 4rem;
+      }
+      .section-title {
+        font-size: 3rem;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .hero-title {
+        font-size: 5.5rem;
+      }
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+      }
+      .about-img-frame {
+        max-width: 500px;
+        margin: 0 auto;
+      }
+      .featured-grid {
+        gap: 2rem;
+      }
+      .featured-item-3 {
+        margin-top: -1.5rem;
+      }
+      .editorial-row {
+        gap: 3rem;
+      }
+    }
+
+    /* MOBILE BREAKPOINT (Under 768px) */
+    @media (max-width: 768px) {
+      /* Navigation */
+      .nav-links {
+        display: none;
+      }
+      .mobile-menu-btn {
+        display: flex;
+      }
+
+      /* Active Mobile Menu button state */
+      .mobile-menu-btn.active span:nth-child(1) {
+        transform: translateY(6px) rotate(45deg);
+      }
+      .mobile-menu-btn.active span:nth-child(2) {
+        opacity: 0;
+        transform: scaleX(0);
+      }
+      .mobile-menu-btn.active span:nth-child(3) {
+        transform: translateY(-6px) rotate(-45deg);
+      }
+
+      /* Hero */
+      .hero-img-wrapper {
+        width: 100%;
+        opacity: 0.75;
+      }
+      #hero {
+        align-items: flex-end;
+      }
+      .hero-content {
+        padding: 0 2rem 6rem 2rem;
+        max-width: 100%;
+        width: 100%;
+      }
+      .hero-title {
+        font-size: 4.8rem;
+        line-height: 0.9;
+      }
+      .hero-subtitle {
+        font-size: 0.7rem;
+      }
+      .hero-location {
+        bottom: 2rem;
+        left: 2rem;
+        right: auto;
+      }
+
+      /* Grid Collapse (3 to 2) */
+      .featured-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        gap: 1.5rem;
+      }
+      .featured-item-1 {
+        grid-column: span 2;
+        grid-row: auto;
+        aspect-ratio: 3/2;
+      }
+      .featured-item-2 {
+        grid-column: 1;
+        grid-row: auto;
+        aspect-ratio: 3/4;
+      }
+      .featured-item-3 {
+        grid-column: 2;
+        grid-row: auto;
+        aspect-ratio: 3/4;
+        margin-top: 0;
+      }
+      .featured-item-4 {
+        grid-column: 1;
+        grid-row: auto;
+        aspect-ratio: 3/4;
+      }
+      .featured-item-5 {
+        grid-column: 2;
+        grid-row: auto;
+        aspect-ratio: 3/4;
+      }
+
+      .personality-grid {
+        column-count: 2;
+        column-gap: 1.5rem;
+      }
+
+      .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+      }
+
+      /* Editorial highlights vertical stack image top */
+      .editorial-row, .editorial-row.reverse {
+        flex-direction: column !important;
+        gap: 2rem;
+        margin-bottom: 6rem;
+      }
+      .editorial-img-col, .editorial-text-col {
+        width: 100% !important;
+      }
+      .editorial-title {
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+      }
+
+      .editorial-fullbleed {
+        height: 50vh;
+        left: 0;
+        right: 0;
+        margin-left: -2rem;
+        margin-right: -2rem;
+        width: calc(100% + 4rem);
+      }
+      .fullbleed-text-box {
+        left: 2rem;
+        right: 2rem;
+        bottom: 3rem;
+      }
+      .fullbleed-title {
+        font-size: 2.2rem;
+      }
+
+      /* Contact */
+      .contact-title {
+        font-size: 3rem;
+      }
+      .contact-link {
+        font-size: 1.8rem;
+      }
+    }
+
+    /* SMALL MOBILE BREAKPOINT (Under 480px) */
+    @media (max-width: 480px) {
+      .hero-title {
+        font-size: 3.8rem;
+      }
+      .section-title {
+        font-size: 2.5rem;
+        margin-bottom: 2.5rem;
+      }
+      .about-stats {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      .about-pullquote {
+        font-size: 2rem;
+      }
+      
+      .featured-grid {
+        grid-template-columns: 1fr;
+      }
+      .featured-item-1 {
+        grid-column: span 1;
+        grid-row: auto;
+        aspect-ratio: 3/4;
+      }
+      .featured-item-2 {
+        grid-column: 1;
+        grid-row: auto;
+        aspect-ratio: 3/4;
+      }
+      .featured-item-3 {
+        grid-column: 1;
+        grid-row: auto;
+        aspect-ratio: 3/4;
+      }
+      .featured-item-4 {
+        grid-column: 1;
+        grid-row: auto;
+        aspect-ratio: 3/4;
+      }
+      .featured-item-5 {
+        grid-column: 1;
+        grid-row: auto;
+        aspect-ratio: 3/4;
+      }
+
+      .personality-grid {
+        column-count: 1;
+      }
+
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .contact-title {
+        font-size: 2.4rem;
+      }
+      .contact-link {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- STARTUP ANIMATION (INTRO SCREEN) -->
+  <div id="intro-screen">
+    <div class="intro-name">Mihaan</div>
+    <div class="intro-line"></div>
+    <div class="intro-sub">Kids Editorial Portfolio</div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <header id="main-header">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">Mihaan</a>
+      <div class="nav-links">
+        <a href="#portfolio">Portfolio</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="mobile-menu-btn" aria-label="Open navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MOBILE NAV OVERLAY -->
+  <div class="mobile-overlay">
+    <nav class="mobile-nav-links">
+      <a href="#portfolio">Portfolio</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section id="hero">
+    <div class="hero-img-wrapper">
+      <!-- High priority image loading, no lazy load for Hero -->
+      <img src="public/images/DSC09643.JPG" alt="Mihaan Portrait" fetchpriority="high">
+    </div>
+    <div class="hero-content">
+      <h1 class="hero-title">Mihaan</h1>
+      <p class="hero-subtitle">Kids Editorial Portfolio</p>
+    </div>
+    <div class="hero-location">Hyderabad · India</div>
+  </section>
+
+  <main>
+    
+    <!-- ABOUT SECTION -->
+    <section id="about">
+      <div class="container">
+        <div class="about-grid">
+          <!-- Left Column: Portrait -->
+          <div class="about-img-frame fade-up">
+            <img src="public/images/DSC09586.JPG" alt="Mihaan Editorial Portrait" loading="lazy">
+          </div>
+          
+          <!-- Right Column: Text & Stats -->
+          <div class="about-info fade-up">
+            <span class="section-label">THE MODEL</span>
+            <div class="editorial-divider"></div>
+            <h2 class="about-pullquote">"Bold at 4. Natural in front of the lens."</h2>
+            
+            <div class="about-stats">
+              <div class="stat-item">
+                <span class="stat-label">Age</span>
+                <span class="stat-value">4 Years</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">Height</span>
+                <span class="stat-value">105 cm</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">Location</span>
+                <span class="stat-value">Hyderabad, Telangana</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">Languages</span>
+                <span class="stat-value">Telugu</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">Special Skills</span>
+                <span class="stat-value">Ramp Walk · Acting & Expressions</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">Hobbies</span>
+                <span class="stat-value">Coming Soon</span>
+              </div>
+            </div>
+
+            <p class="about-desc">
+              Mihaan is a 4-year-old natural in front of the camera — expressive, energetic, and effortlessly camera-ready. Based in Hyderabad, Mihaan brings a rare combination of stage confidence and genuine charm to every frame.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED FACES -->
+    <section id="featured-faces">
+      <div class="container">
+        <div class="fade-up">
+          <span class="section-label">FEATURED FACES</span>
+          <h2 class="section-title">Portraits</h2>
+        </div>
+        
+        <div class="featured-grid">
+          <!-- Item 1: Large spanning 2 rows -->
+          <div class="featured-item featured-item-1 fade-up">
+            <img src="public/images/DSC09642.JPG" alt="Mihaan Headshot Close-up" loading="lazy">
+          </div>
+          <!-- Item 2: Column 2 Row 1 -->
+          <div class="featured-item featured-item-2 fade-up">
+            <img src="public/images/DSC09583.JPG" alt="Mihaan Studio Portrait" loading="lazy">
+          </div>
+          <!-- Item 3: Column 2 Row 2 -->
+          <div class="featured-item featured-item-3 fade-up">
+            <img src="public/images/DSC09603.JPG" alt="Mihaan Joyful Smile" loading="lazy">
+          </div>
+          <!-- Item 4: Column 3 Row 1 -->
+          <div class="featured-item featured-item-4 fade-up">
+            <img src="public/images/DSC09585.JPG" alt="Mihaan Expressive Headshot" loading="lazy">
+          </div>
+          <!-- Item 5: Column 3 Row 2 -->
+          <div class="featured-item featured-item-5 fade-up">
+            <img src="public/images/DSC09604.JPG" alt="Mihaan Studio Smile" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDITORIAL HIGHLIGHTS -->
+    <section id="editorial-highlights">
+      <div class="container">
+        <div class="fade-up">
+          <span class="section-label">HIGHLIGHTS</span>
+          <h2 class="section-title">Editorial Features</h2>
+        </div>
+
+        <!-- Row 1: Image Left, Text Right -->
+        <div class="editorial-row fade-up">
+          <div class="editorial-img-col">
+            <img src="public/images/DSC09673.JPG" alt="The Little Showstopper Campaign" loading="lazy">
+          </div>
+          <div class="editorial-text-col">
+            <span class="editorial-num">01 / CAMPAIGN</span>
+            <h3 class="editorial-title">The Little Showstopper</h3>
+            <p class="editorial-desc">
+              Walking with natural rhythm and presence, Mihaan commands the runway with ease, capturing attention through candid charm and a remarkable natural composure.
+            </p>
+          </div>
+        </div>
+
+        <!-- Row 2: Text Left, Image Right -->
+        <div class="editorial-row reverse fade-up">
+          <div class="editorial-img-col">
+            <img src="public/images/DSC09623.JPG" alt="Expressive Kids Fashion Session" loading="lazy">
+          </div>
+          <div class="editorial-text-col">
+            <span class="editorial-num">02 / STUDIO</span>
+            <h3 class="editorial-title">Expressive. Natural. Unforgettable.</h3>
+            <p class="editorial-desc">
+              From bright joyful laughter to subtle high-fashion focus, Mihaan easily shifts expressions to match any creative brief, proving his versatility across campaigns.
+            </p>
+          </div>
+        </div>
+
+        <!-- Row 3: Full Bleed Image with text overlay bottom-left -->
+        <div class="editorial-fullbleed fade-up">
+          <img src="public/images/DSC09689.JPG" alt="Mihaan Panoramic Editorial Shot" loading="lazy">
+          <div class="fullbleed-text-box">
+            <h3 class="fullbleed-title">The Next Generation</h3>
+            <p class="fullbleed-desc">
+              A timeless grace and spontaneous expression that defines the next generation of child modeling talent.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PERSONALITY FRAMES (CANDID) -->
+    <section id="personality-frames">
+      <div class="container">
+        <div class="fade-up">
+          <span class="section-label">PERSONALITY FRAMES</span>
+          <h2 class="section-title">Candid · Playful · Real</h2>
+        </div>
+        
+        <div class="personality-grid">
+          <div class="personality-item fade-up">
+            <img src="public/images/DSC09660.JPG" alt="Mihaan Candid Play" loading="lazy">
+          </div>
+          <div class="personality-item fade-up">
+            <img src="public/images/DSC09621.JPG" alt="Mihaan Soft Laughing Shot" loading="lazy">
+          </div>
+          <div class="personality-item fade-up">
+            <img src="public/images/DSC09683.JPG" alt="Mihaan Outdoor Candid Moment" loading="lazy">
+          </div>
+          <div class="personality-item fade-up">
+            <img src="public/images/DSC09559.JPG" alt="Mihaan Curious Expression" loading="lazy">
+          </div>
+          <!-- Playful Vertical Name Card to balance column -->
+          <div class="personality-graphic-card fade-up">
+            <span class="card-tag">The Model</span>
+            <div class="card-rule"></div>
+            <div class="card-name-large">Mihaan</div>
+            <span class="card-signature">Hyderabad · India</span>
+          </div>
+          <div class="personality-item fade-up">
+            <img src="public/images/DSC09681.JPG" alt="Mihaan High-energy Play Capture" loading="lazy">
+          </div>
+          <div class="personality-item fade-up">
+            <img src="public/images/DSC09626.JPG" alt="Mihaan Elegant Studio Shot" loading="lazy">
+          </div>
+          <div class="personality-item fade-up">
+            <img src="public/images/DSC09629.JPG" alt="Mihaan Candid Smile" loading="lazy">
+          </div>
+          <!-- Playful Quote/Signature Card to balance column -->
+          <div class="personality-graphic-card fade-up">
+            <h3 class="card-quote">"Always exploring, laughing, and showing my true colors."</h3>
+            <span class="card-signature">Ramp Walk · Acting · Expressions</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO GRID -->
+    <section id="portfolio">
+      <div class="container">
+        <div class="fade-up">
+          <span class="section-label">PORTFOLIO</span>
+          <h2 class="section-title">Complete Collection</h2>
+        </div>
+
+        <div class="portfolio-grid">
+          <!-- Curated model portfolio shots -->
+          <div class="portfolio-item fade-up">
+            <img src="public/images/DSC09575.JPG" alt="Mihaan Curated Model Shot 1" loading="lazy">
+          </div>
+          <div class="portfolio-item fade-up">
+            <img src="public/images/DSC09576.JPG" alt="Mihaan Curated Model Shot 2" loading="lazy">
+          </div>
+          <div class="portfolio-item fade-up">
+            <img src="public/images/DSC09634.JPG" alt="Mihaan Curated Model Shot 3" loading="lazy">
+          </div>
+          <div class="portfolio-item fade-up">
+            <img src="public/images/DSC09646.JPG" alt="Mihaan Curated Model Shot 4" loading="lazy">
+          </div>
+          <div class="portfolio-item fade-up">
+            <img src="public/images/DSC09648.JPG" alt="Mihaan Curated Model Shot 5" loading="lazy">
+          </div>
+          <div class="portfolio-item fade-up">
+            <img src="public/images/DSC09661.JPG" alt="Mihaan Curated Model Shot 6" loading="lazy">
+          </div>
+          <div class="portfolio-item fade-up">
+            <img src="public/images/DSC09666.JPG" alt="Mihaan Curated Model Shot 7" loading="lazy">
+          </div>
+          <div class="portfolio-item fade-up">
+            <img src="public/images/DSC09674.JPG" alt="Mihaan Curated Model Shot 8" loading="lazy">
+          </div>
+          <div class="portfolio-item fade-up">
+            <img src="public/images/DSC09677.JPG" alt="Mihaan Curated Model Shot 9" loading="lazy">
+          </div>
+          <div class="portfolio-item fade-up">
+            <img src="public/images/DSC09682.JPG" alt="Mihaan Curated Model Shot 10" loading="lazy">
+          </div>
+          <div class="portfolio-item fade-up">
+            <img src="public/images/DSC09670.JPG" alt="Mihaan Curated Model Shot 11" loading="lazy">
+          </div>
+          <div class="portfolio-item fade-up">
+            <img src="public/images/DSC09671.JPG" alt="Mihaan Curated Model Shot 12" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+      <div class="container">
+        <h2 class="contact-title">Let's Create Together</h2>
+        <p class="contact-subtext">For casting inquiries, brand collaborations, and agency representation</p>
+        
+        <div class="contact-links">
+          <a href="mailto:mihaanchette@gmail.com" class="contact-link">mihaanchette@gmail.com</a>
+          <a href="https://instagram.com/little.mihaan" target="_blank" rel="noopener noreferrer" class="contact-link">@little.mihaan</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-text">© 2026 Mihaan · All Rights Reserved · Hyderabad, India</div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTING (VANILLA JS ONLY) -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      
+      /* 1. STARTUP PRELOADER ORCHESTRATION */
+      const intro = document.getElementById("intro-screen");
+      const isIntroSeen = sessionStorage.getItem("mihaan_intro_seen");
+
+      if (isIntroSeen) {
+        if (intro) intro.style.display = "none";
+        document.body.style.overflow = "auto";
+      } else {
+        document.body.style.overflow = "hidden";
+        setTimeout(() => {
+          if (intro) {
+            intro.style.display = "none";
+          }
+          document.body.style.overflow = "auto";
+          sessionStorage.setItem("mihaan_intro_seen", "true");
+        }, 3100);
+      }
+
+      /* 2. STICKY NAVIGATION ON SCROLL */
+      const header = document.getElementById("main-header");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      });
+
+      /* 3. MOBILE MENU TOGGLE */
+      const menuBtn = document.querySelector(".mobile-menu-btn");
+      const mobileOverlay = document.querySelector(".mobile-overlay");
+      const mobileLinks = document.querySelectorAll(".mobile-nav-links a");
+
+      if (menuBtn && mobileOverlay) {
+        menuBtn.addEventListener("click", () => {
+          menuBtn.classList.toggle("active");
+          mobileOverlay.classList.toggle("active");
+          if (mobileOverlay.classList.contains("active")) {
+            document.body.style.overflow = "hidden";
+          } else {
+            document.body.style.overflow = "auto";
+          }
+        });
+
+        mobileLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            menuBtn.classList.remove("active");
+            mobileOverlay.classList.remove("active");
+            document.body.style.overflow = "auto";
+          });
+        });
+      }
+
+      /* 4. SCROLL ANIMATION (INTERSECTION OBSERVER) */
+      const observerOptions = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.05
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target); // Unobserve to save memory once animation executes
+          }
+        });
+      }, observerOptions);
+
+      // Register all fade-up elements
+      document.querySelectorAll(".fade-up").forEach(el => {
+        observer.observe(el);
+      });
+
+    });
+  </script>
+</body>
+</html>

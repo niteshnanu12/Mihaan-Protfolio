@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: var(--font-playfair), Playfair Display, Georgia, serif;
+  --font-sans: var(--font-inter), Inter, system-ui, sans-serif;
+  
+  --color-beige-50: #faf9f5;
+  --color-beige-100: #f5f3e9;
+  --color-beige-200: #eadecc;
+  --color-beige-300: #decbb3;
+  --color-beige-400: #caa88b;
+  --color-beige-950: #1c130d;
+  
+  --color-luxury-black: #0c0c0c;
+  --color-luxury-dark: #121212;
+  --color-luxury-gray: #1a1a1a;
+  --color-luxury-light: #f5f5f7;
+  
+  --color-gold-light: #dfc299;
+  --color-gold-muted: #af9c73;
+}
+
+:root {
+  --background: #faf9f6; /* Premium light editorial background */
+  --foreground: #0c0c0c; /* Luxury black */
+  --card-bg: #ffffff;
+  --card-border: rgba(0, 0, 0, 0.06);
+  --accent-gold: #af9c73;
+}
+
+/* Dark mode overrides */
+.dark {
+  --background: #0c0c0c; /* Rich black background */
+  --foreground: #f5f5f7; /* Crisp elegant off-white */
+  --card-bg: #121212;
+  --card-border: rgba(255, 255, 255, 0.05);
+  --accent-gold: #dfc299;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Custom Selection style */
+::selection {
+  background-color: var(--accent-gold);
+  color: #0c0c0c;
+}
+
+/* Custom premium scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-gold);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #96835d;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera (Behind-the-scenes drag gallery) */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Parallax zoom effect wrapper */
+.parallax-container {
+  overflow: hidden;
+  position: relative;
+}
+
+/* Luxury hover effect for images */
+.image-zoom-hover {
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s ease;
+}
+
+.image-zoom-hover:hover {
+  transform: scale(1.05);
+}
+
+/* Soft transition classes */
+.fade-in-load {
+  animation: fadeIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
